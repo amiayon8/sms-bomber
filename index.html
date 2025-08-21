@@ -1160,7 +1160,11 @@ const data = {
 
         function validateNumber(number) {
             const phoneRegex = /^01\d{9}$/;
-            return phoneRegex.test(number);
+			const tntRegex = /^09\d{9}$/;
+			const phoneCheck = phoneRegex.test(number);
+			const tntCheck = tntRegex.test(number);
+			const check = phoneCheck || tntCheck;
+            return check;
         }
 
         function validateAmount(amount) {
@@ -1247,3 +1251,4 @@ async function startProcess() {
     </script>
 </body>
 </html>
+
